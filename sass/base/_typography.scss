@@ -1,0 +1,17 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--color-grey-dark-2);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+}
