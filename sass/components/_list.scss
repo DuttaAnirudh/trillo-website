@@ -8,6 +8,13 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media only screen and (max-width: $bp-smallest) {
+    flex-direction: column;
+    max-width: 21rem;
+    margin: 1rem auto;
+    padding: 1rem 0;
+  }
+
   &__item {
     flex: 0 0 50%;
     margin-bottom: 0.7rem;
