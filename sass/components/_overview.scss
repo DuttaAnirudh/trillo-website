@@ -1,7 +1,34 @@
 .overview {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-bottom: var(--line);
+
+  @media only screen and (max-width: $bp-smallest) {
+    position: relative;
+    flex-direction: column;
+  }
+
+  &__box-left {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column;
+    }
+  }
+
+  &__box-right {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+
+    @media only screen and (max-width: $bp-smallest) {
+      align-self: center;
+      flex-direction: column;
+      padding: 2rem 0;
+    }
+  }
 
   &__heading {
     font-weight: 300;
@@ -17,7 +44,6 @@
   }
 
   &__stars {
-    margin-right: auto;
     display: flex;
   }
 
@@ -48,6 +74,16 @@
     margin-left: 3rem;
     padding: 0 2.25rem;
     align-self: stretch;
+
+    @media only screen and (max-width: $bp-smallest) {
+      position: absolute;
+      top: 2.7rem;
+      right: 2rem;
+      height: 7rem;
+      width: 7rem;
+      margin-left: 0;
+      border-radius: 50%;
+    }
   }
 
   &__rating-average {
