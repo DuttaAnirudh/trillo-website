@@ -8,6 +8,12 @@
     margin-right: auto;
   }
 
+  &__friends {
+    @media only screen and (max-width: $bp-large) {
+      display: flex;
+    }
+  }
+
   &__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -17,6 +23,10 @@
 
     &:not(:last-child) {
       margin-right: -1.5rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-right: -2rem;
+      }
     }
   }
 }
