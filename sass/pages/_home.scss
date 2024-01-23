@@ -23,7 +23,8 @@
   height: 7rem;
   background-color: #fff;
   border-bottom: 1px solid var(--color-grey-light-2);
-  overflow: hidden;
+  // overflow: hidden; // TEST
+  position: relative;
 
   @media only screen and (max-width: $bp-smallest) {
     flex-wrap: wrap;

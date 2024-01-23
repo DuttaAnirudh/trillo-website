@@ -1,0 +1,126 @@
+.user-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 7rem;
+  right: 1rem;
+  width: 23rem;
+  background-color: var(--color-grey-light-1);
+  z-index: 100;
+  box-shadow: var(--shadow-dark);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+
+  &__user-info-box {
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem 2rem 1.5rem;
+    border-bottom: 1px solid var(--color-grey-light-4);
+  }
+
+  &__user-photo {
+    height: 4.5rem;
+    border-radius: 50rem;
+    margin-right: 1rem;
+  }
+
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user-name {
+    color: var(--color-grey-dark-1);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__user-id {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  &__user-options {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-box {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--color-grey-light-4);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      margin-left: 1rem;
+      margin-block: 0.5rem;
+      text-transform: capitalize;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: var(--color-primary-light);
+    }
+  }
+
+  &__link-icon-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+
+    &:hover {
+      color: var(--color-primary-light);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3);
+    transition: all 0.2s;
+
+    &--trillo-credit {
+      fill: var(--color-primary-light);
+    }
+  }
+
+  &__link-icon-box:hover &__icon {
+    fill: var(--color-primary-light);
+  }
+
+  &__language-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__language {
+    margin-right: 0.8rem;
+  }
+}
