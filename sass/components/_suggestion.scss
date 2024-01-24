@@ -1,0 +1,54 @@
+.suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--color-grey-light-3);
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__hotel-picture {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+  }
+
+  &__hotel-name {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-left: 3rem;
+    padding: 0 1.25rem;
+    height: 3rem;
+    width: 3rem;
+
+    border-radius: 50%;
+  }
+
+  &__rating-average {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &:hover &__title &__hotel-name {
+    color: var(--color-primary);
+  }
+}
