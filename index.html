@@ -32,18 +32,67 @@
         </form>
 
         <nav class="user-nav">
+          <!-- BOOKMARKS -->
           <div class="user-nav__icon-box">
             <svg class="user-nav__icon">
               <use href="assets/symbol-defs.svg#icon-bookmark"></use>
             </svg>
             <span class="user-nav__notification">7</span>
           </div>
-          <div class="user-nav__icon-box">
+
+          <!-- CHAT BOX -->
+          <div class="user-nav__messages user-nav__icon-box">
             <svg class="user-nav__icon">
               <use href="assets/symbol-defs.svg#icon-chat"></use>
             </svg>
             <span class="user-nav__notification">10</span>
+
+            <div class="message">
+              <div class="message__chat-box">
+                <img
+                  src="/assets/user-6.jpg"
+                  alt="User profile picture"
+                  class="message__user-picture"
+                />
+
+                <div class="message__content-box">
+                  <div class="message__info">
+                    <h3 class="message__user-name">John Smith</h3>
+                    <p class="message__time message__time--recent">
+                      2 hours ago
+                    </p>
+                  </div>
+                  <p class="message__text">
+                    Lorem ipsum dolor sit amet elit...
+                  </p>
+                </div>
+              </div>
+
+              <div class="message__chat-box">
+                <img
+                  src="/assets/user-4.jpg"
+                  alt="User profile picture"
+                  class="message__user-picture"
+                />
+
+                <div class="message__content-box">
+                  <div class="message__info">
+                    <h3 class="message__user-name">Rachel clark</h3>
+                    <p class="message__time message__time--recent">
+                      8 hours ago
+                    </p>
+                  </div>
+                  <p class="message__text">
+                    Lorem ipsum dolor sit amet elit...
+                  </p>
+                </div>
+              </div>
+
+              <a href="#" class="message__cta">See more (8)</a>
+            </div>
           </div>
+
+          <!-- USER MENU -->
           <div class="user-nav__user">
             <img
               src="assets/user.jpg"

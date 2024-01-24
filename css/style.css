@@ -228,6 +228,9 @@ body {
   .user-nav__user:hover .user-menu {
     visibility: visible;
     opacity: 1; }
+  .user-nav__messages:hover .message {
+    visibility: visible;
+    opacity: 1; }
 
 .side-nav {
   font-size: 1.4rem;
@@ -382,6 +385,85 @@ body {
     align-items: center; }
   .user-menu__language {
     margin-right: 0.8rem; }
+
+.message {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 7rem;
+  right: -2rem;
+  width: 23rem;
+  background-color: var(--color-grey-light-1);
+  z-index: 100;
+  box-shadow: var(--shadow-dark);
+  padding-top: 1rem;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s; }
+  .message__chat-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.2rem;
+    position: relative;
+    margin-bottom: 1rem; }
+  .message__chat-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary); }
+  .message__user-picture {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%; }
+  .message__content-box {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-grey-dark-1); }
+  .message__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: inherit; }
+  .message__user-name {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: inherit; }
+  .message__time {
+    font-size: 0.8rem;
+    font-weight: 600; }
+  .message__text {
+    font-size: 1rem;
+    color: inherit;
+    position: relative; }
+  .message__time--recent::before {
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+    top: 1.2rem;
+    left: 16.3rem;
+    z-index: 1000; }
+    @media only screen and (max-width: 68.75em) {
+      .message__time--recent::before {
+        top: 1.13rem; } }
+  .message__cta:link, .message__cta:visited {
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-grey-dark-1);
+    padding: 0.5rem 0; }
+    .message__cta:link:hover, .message__cta:link:active, .message__cta:visited:hover, .message__cta:visited:active {
+      color: var(--color-primary); }
 
 .list {
   list-style: none;

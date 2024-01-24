@@ -1,0 +1,106 @@
+.message {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 7rem;
+  right: -2rem;
+  width: 23rem;
+  background-color: var(--color-grey-light-1);
+  z-index: 100;
+  box-shadow: var(--shadow-dark);
+  padding-top: 1rem;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+
+  &__chat-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.2rem;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  &__chat-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+  }
+
+  &__user-picture {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-grey-dark-1);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: inherit;
+  }
+
+  &__user-name {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: inherit;
+  }
+
+  &__time {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: inherit;
+    position: relative;
+  }
+
+  &__time--recent::before {
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+    top: 1.2rem;
+    left: 16.3rem;
+    z-index: 1000;
+
+    @media only screen and (max-width: $bp-large) {
+      top: 1.13rem;
+    }
+  }
+
+  &__cta {
+    &:link,
+    &:visited {
+      text-align: center;
+      text-transform: capitalize;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-grey-dark-1);
+      padding: 0.5rem 0;
+
+      &:hover,
+      &:active {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
